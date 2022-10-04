@@ -11,7 +11,8 @@ const registerValidaiton = Joi.object().keys({
 
 const loginValidation = Joi.object().keys({
     email: Joi.string().email().required(),
-    password: Joi.string().required().custom(password),
+    password: Joi.string().required()
+    // .custom(password),
 }).options({ allowUnknown: true });
 
 module.exports = {

@@ -1,15 +1,16 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Home } from '../pages';
-import Layout from '../layout';
+import { Home ,notFound} from '../pages';
+// import Layout from '../layout';
+
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Layout>
             <Route path='/' element={<Home />} />
-          </Layout>
+            <Route path='*' element={<notFound />} />
+          
         </Routes>
       </Router>
     </div>
